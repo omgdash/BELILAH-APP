@@ -1,0 +1,6 @@
+{
+  "name": "Belilah - Platform E-Dagang Barangan Tempatan Malaysia",
+  "description": "Beli-belah pelbagai produk buatan tempatan Malaysia dengan jualan kilat, baucar penghantaran percuma, dan sistem pembayaran selamat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,11 +1,101 @@
-<div align="center">
+# 🛍️ Belilah - Platform E-Dagang Produk Tempatan Malaysia 🇲🇾
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+> **Belilah** ialah aplikasi web progresif (PWA) e-dagang berinspirasikan Shopee Malaysia yang khusus untuk mempromosikan dan menjual pelbagai produk tempatan buatan Malaysia (sambal tradisi, kerepek, batik Terengganu, kraftangan, herba asli, dan kopi kampung) dengan **sistem pembayaran selamat (FPX, DuitNow QR, TNG eWallet, Kad Kredit/Debit 3D Secure, COD)**.
 
-  <h1>Built with AI Studio</h2>
+---
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## 🚀 Panduan Publish / Terbitkan Projek ke GitHub & GitHub Pages
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+Projek ini telah dikonfigurasikan dengan **GitHub Actions** (`.github/workflows/deploy.yml`) dan tetapan `base: './'` dalam `vite.config.ts`, membolehkan anda memuat naik dan menerbitkan aplikasi ini secara **percuma** ke **GitHub Pages**.
 
-</div>
+### Langkah 1: Cipta Repository di GitHub
+1. Pergi ke laman web [GitHub](https://github.com/) dan log masuk.
+2. Klik butang **"New"** atau layari [github.com/new](https://github.com/new).
+3. Berikan nama repository, contohnya: `belilah-malaysia`.
+4. Pilih **Public**.
+5. Jangan tanda ("tick") *Add a README file* (kerana projek ini sudah ada).
+6. Klik **"Create repository"**.
+
+### Langkah 2: Push Kod Menggunakan Terminal / Git
+Buka terminal dalam folder projek ini dan jalankan arahan berikut:
+
+```bash
+# 1. Mulakan git (jika belum)
+git init
+
+# 2. Tambah semua fail ke dalam git
+git add .
+
+# 3. Buat commit pertama
+git commit -m "Pelancaran Pertama Belilah Malaysia PWA"
+
+# 4. Tetapkan branch utama kepada 'main'
+git branch -M main
+
+# 5. Sambungkan ke GitHub repository anda
+# (Gantikan <USERNAME> dengan username GitHub anda)
+git remote add origin https://github.com/<USERNAME>/belilah-malaysia.git
+
+# 6. Push kod ke GitHub
+git push -u origin main
+```
+
+### Langkah 3: Aktifkan GitHub Pages (Hosting Percuma)
+1. Di halaman repository anda di GitHub, klik tab **Settings** (di bahagian atas).
+2. Pada menu bar sisi sebelah kiri, klik **Pages**.
+3. Di bawah bahagian **Build and deployment**:
+   - Pada pilihan **Source**, pilih **GitHub Actions**.
+4. GitHub Actions akan secara automatik menjalankan fail `.github/workflows/deploy.yml` untuk membina (*build*) dan menerbitkan laman anda dalam masa 1–2 minit.
+5. URL laman web anda akan dipaparkan di bahagian atas tab Pages:
+   ```
+   https://<USERNAME>.github.io/belilah-malaysia/
+   ```
+
+---
+
+## 📱 Ciri-Ciri Aplikasi Belilah (PWA Ready)
+
+- 🎛️ **Panel Pentadbir CMS (Content Management System)**: Pentadbir boleh meminda sendiri seluruh portal secara terus dari pelayar:
+  - Pinda & tambah sepanduk promosi (*Carousel Banners*).
+  - Pinda harga, stok, negeri, dan slot Jualan Kilat (*Flash Sale*) bagi setiap produk tempatan.
+  - Cipta & urus kod baucar diskaun baru.
+  - Kemas kini nama portal, slogan, maklumat sokongan dan had penghantaran percuma.
+  - Urus status pesanan pelanggan dan lepaskan wang Belilah Escrow kepada penjual.
+  - Eksport & Import data sandaran (*JSON Backup & Restore*).
+- 📲 **Boleh Dipasang (PWA Installable)**: Pengguna boleh menekan butang *"Pasang Apps Belilah"* atau *"Add to Home Screen"* pada iPhone/Android/Komputer untuk memasang aplikasi seperti aplikasi native.
+- ⚡ **Jualan Kilat (Flash Sale)**: Pemasa undur dengan tawaran diskaun hebat bagi barangan tempatan.
+- 🇲🇾 **Penapis Mengikut 14 Negeri**: Cari produk khas mengikut negeri asal (Kelantan, Terengganu, Johor, Melaka, Perak, Pahang, Sabah, Sarawak, dsb.).
+- 🛡️ **Sistem Pembayaran Selamat**:
+  - **FPX Online Banking** (Maybank2u, CIMB Clicks, Bank Islam, RHB, Public Bank, Hong Leong, AmOnline, BSN).
+  - **DuitNow QR Kebangsaan** dengan pengesahan imbasan segera.
+  - **Touch 'n Go eWallet** dengan pengesahan PIN 6-digit.
+  - **BelilahPay** dengan rebat koin.
+  - **Kad Debit & Kredit** dengan pengesahan keselamatan 3D Secure OTP.
+  - **Belilah Escrow Guarantee**: Duit dilindungi sehingga pesanan disahkan diterima.
+- 📦 **Pengesanan Kurier Langsung (Live Tracking)**: Pilihan Pos Laju, J&T Express, Ninja Van & DHL eCommerce berserta nombor tracking & timeline status.
+- 🏪 **Pusat Penjual Tempatan (Seller Center)**: Daftar dan senaraikan produk tempatan baru secara terus ke platform.
+- 💬 **Sembang Langsung (Live Chat)**: Berbual terus dengan peniaga tempatan.
+- 🔴 **Belilah LIVE**: Siaran langsung peniaga dengan ulasan dan butang beli segera.
+- 🪙 **Koin Belilah**: Daftar masuk harian untuk tebus koin potongan harga tunai.
+
+---
+
+## 💻 Pembangunan Tempatan (Local Development)
+
+```bash
+# Pasang pakej yang diperlukan
+npm install
+
+# Jalankan server pembangunan
+npm run dev
+
+# Bina untuk produksi
+npm run build
+
+# Uji hasil binaan produksi
+npm run preview
+```
+
+---
+
+Dihasilkan dengan ❤️ untuk menyokong Kempen Beli Barangan Malaysia.
