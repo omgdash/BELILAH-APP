@@ -25,29 +25,40 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Bun Environment
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 20
+          bun-version: latest
 
-     - name: Setup Bun
-      uses: oven-sh/setup-bun@v2
-      with:
-        bun-version: latest
-    
-    - name: Install Dependencies
-      run: bun install --frozen-lockfile
-    
-    - name: Build Application
-      run: bun run build
+      - name: Install Dependencies
+        run: bun install --frozen-lockfile
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+      - name: Build Vite Production Application
+        run: bun run build
 
-      - name: Upload Artifact
+      - name: Verify Production Build Output
+        run: |
+          if [ ! -d "dist" ]; then
+            echo "Error: dist directory does not exist after build."
+            exit 1
+          fi
+          if [ ! -f "dist/index.html" ]; then
+            echo "Error: dist/index.html does not exist after build."
+            exit 1
+          fi
+          if grep -q 'src="/src/main.tsx"' dist/index.html; then
+            echo "Error: dist/index.html still references raw /src/main.tsx!"
+            exit 1
+          fi
+          echo "Verification passed: compiled dist/index.html successfully created with production assets."
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'

@@ -6,17 +6,9 @@
 
 ## 🚀 Panduan Publish / Terbitkan Projek ke GitHub & GitHub Pages
 
-Projek ini telah dikonfigurasikan dengan **GitHub Actions** (`.github/workflows/deploy.yml`) dan tetapan `base: './'` dalam `vite.config.ts`, membolehkan anda memuat naik dan menerbitkan aplikasi ini secara **percuma** ke **GitHub Pages**.
+Projek ini telah dikonfigurasikan dengan **GitHub Actions** (`.github/workflows/deploy.yml`) berasaskan **Bun** dan tetapan `base: '/BELILAH-APP/'` dalam `vite.config.ts`, membolehkan anda memuat naik dan menerbitkan aplikasi ini secara **percuma** ke **GitHub Pages**.
 
-### Langkah 1: Cipta Repository di GitHub
-1. Pergi ke laman web [GitHub](https://github.com/) dan log masuk.
-2. Klik butang **"New"** atau layari [github.com/new](https://github.com/new).
-3. Berikan nama repository, contohnya: `belilah-malaysia`.
-4. Pilih **Public**.
-5. Jangan tanda ("tick") *Add a README file* (kerana projek ini sudah ada).
-6. Klik **"Create repository"**.
-
-### Langkah 2: Push Kod Menggunakan Terminal / Git
+### Langkah 1: Push Kod Menggunakan Terminal / Git
 Buka terminal dalam folder projek ini dan jalankan arahan berikut:
 
 ```bash
@@ -26,29 +18,28 @@ git init
 # 2. Tambah semua fail ke dalam git
 git add .
 
-# 3. Buat commit pertama
-git commit -m "Pelancaran Pertama Belilah Malaysia PWA"
+# 3. Buat commit
+git commit -m "Fix GitHub Pages deployment for BELILAH-APP"
 
 # 4. Tetapkan branch utama kepada 'main'
 git branch -M main
 
 # 5. Sambungkan ke GitHub repository anda
-# (Gantikan <USERNAME> dengan username GitHub anda)
-git remote add origin https://github.com/<USERNAME>/belilah-malaysia.git
+git remote add origin https://github.com/omgdash/BELILAH-APP.git
 
 # 6. Push kod ke GitHub
 git push -u origin main
 ```
 
-### Langkah 3: Aktifkan GitHub Pages (Hosting Percuma)
-1. Di halaman repository anda di GitHub, klik tab **Settings** (di bahagian atas).
+### Langkah 2: Aktifkan GitHub Pages (Hosting Percuma)
+1. Di halaman repository anda di GitHub: [https://github.com/omgdash/BELILAH-APP](https://github.com/omgdash/BELILAH-APP), klik tab **Settings** (di bahagian atas).
 2. Pada menu bar sisi sebelah kiri, klik **Pages**.
 3. Di bawah bahagian **Build and deployment**:
    - Pada pilihan **Source**, pilih **GitHub Actions**.
-4. GitHub Actions akan secara automatik menjalankan fail `.github/workflows/deploy.yml` untuk membina (*build*) dan menerbitkan laman anda dalam masa 1–2 minit.
-5. URL laman web anda akan dipaparkan di bahagian atas tab Pages:
+4. GitHub Actions akan secara automatik menjalankan fail `.github/workflows/deploy.yml` untuk membina (*build*) dan menerbitkan laman anda dalam masa kurang 1 minit.
+5. Laman web anda sedia diakses secara langsung di:
    ```
-   https://<USERNAME>.github.io/belilah-malaysia/
+   https://omgdash.github.io/BELILAH-APP/
    ```
 
 ---

@@ -32,8 +32,8 @@ git commit -m "Pelancaran Pertama Belilah Malaysia - Platform E-Dagang Produk Te
 # 3. Tukar nama branch utama ke main
 git branch -M main
 
-# 4. Sambungkan ke GitHub repository anda (Gantikan URL di bawah dengan repo anda)
-git remote add origin https://github.com/<USERNAME>/belilah-malaysia.git
+# 4. Sambungkan ke GitHub repository anda
+git remote add origin https://github.com/omgdash/BELILAH-APP.git
 
 # 5. Push kod anda ke GitHub
 git push -u origin main`;
@@ -197,7 +197,7 @@ git push -u origin main`;
                 <div>
                   <strong>Projek Anda Sudah 100% Sedia Untuk GitHub!</strong>
                   <p className="text-[11px] text-emerald-700 mt-0.5">
-                    Fail automasi <code>.github/workflows/deploy.yml</code> dan tetapan <code>base: './'</code> telah dikonfigurasikan secara automatik untuk GitHub Pages.
+                    Fail automasi <code>.github/workflows/deploy.yml</code> dan tetapan <code>base: '/BELILAH-APP/'</code> telah dikonfigurasikan secara automatik untuk GitHub Pages.
                   </p>
                 </div>
               </div>
@@ -206,10 +206,10 @@ git push -u origin main`;
               <div className="space-y-1.5">
                 <div className="flex items-center gap-2 font-bold text-gray-900 text-sm">
                   <span className="w-5 h-5 rounded-full bg-[#ee4d2d] text-white text-xs flex items-center justify-center">1</span>
-                  <span>Cipta Repository Baru di GitHub</span>
+                  <span>Repository GitHub</span>
                 </div>
                 <p className="text-gray-600 pl-7">
-                  Pergi ke <a href="https://github.com/new" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-bold inline-flex items-center gap-1">github.com/new <ExternalLink className="w-3 h-3" /></a> dan buat repository baru bernama <code>belilah-malaysia</code> (pilih Public).
+                  Repository anda: <a href="https://github.com/omgdash/BELILAH-APP" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-bold inline-flex items-center gap-1">github.com/omgdash/BELILAH-APP <ExternalLink className="w-3 h-3" /></a>
                 </p>
               </div>
 
@@ -247,7 +247,7 @@ git push -u origin main`;
                   <p className="text-emerald-700 font-medium">
                     ✓ Dalam masa 1-2 minit, website Belilah anda akan live secara percuma di:
                     <code className="block bg-gray-100 p-1.5 rounded text-gray-800 font-mono mt-1">
-                      https://&lt;username&gt;.github.io/belilah-malaysia/
+                      https://omgdash.github.io/BELILAH-APP/
                     </code>
                   </p>
                 </div>
