@@ -7,7 +7,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig(() => {
   return {
     // Relative base ensures compatibility with GitHub Pages (https://<username>.github.io/<repo>/)
-    base: './',
+    base: '/BEILAH-APP/',
     plugins: [
       react(),
       tailwindcss(),
